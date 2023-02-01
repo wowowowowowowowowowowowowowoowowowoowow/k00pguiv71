@@ -10,7 +10,7 @@ end
 messageDoneFiltering.OnClientEvent:Connect(
     function(message)
     local speaker = players:FindFirstChild(message.FromSpeaker)
-    local message = message.Message or ""
+    local message = message.Message
         appendfile("chatlogger.lua", tostring(os.date("%p")) .. "[".. speaker.Name .."]: " .. message .. "\n")
     end
 end
