@@ -4,6 +4,16 @@ options.Method = shared.Method
 options.Keybind = shared.Keybind
 options.ShowMethodDictionary = shared.ShowMethodDictionary
 
+if getgenv().BetterBypasserLOADED then
+	error("BetterBypasser is already running!")
+	return
+end
+
+
+pcall(function()
+	getgenv().BetterBypasserLOADED = true
+end)
+
 
 coroutine.wrap(function()
     local httprequest = (syn and syn.request) or http and http.request or http_request or (fluxus and fluxus.request) or request
