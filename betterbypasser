@@ -1,8 +1,8 @@
-local options = ({...})[1] or { Method = 1, Keybind = "Q", ShowMethodDictionary = true};
+local options = ({...})[1] or { Method = 1, Keybind = "F", ShowMethodDictionary = true};
 
-options.Method = getgenv().Method
-options.Keybind = getgenv().Keybind
-options.ShowMethodDictionary = getgenv().ShowMethodDictionary
+options.Method = shared.Method
+options.Keybind = shared.Keybind
+options.ShowMethodDictionary = shared.ShowMethodDictionary
 
 
 coroutine.wrap(function()
