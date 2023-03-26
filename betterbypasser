@@ -1,8 +1,9 @@
 local options = ({...})[1] or { Method = 1, Keybind = "F", ShowMethodDictionary = true};
 
-options.Method = shared.Method
-options.Keybind = shared.Keybind
-options.ShowMethodDictionary = shared.ShowMethodDictionar
+options.Method = _G.Methodd
+options.Keybind = _G.Keybindd
+options.ShowMethodDictionary = _G.ShowMethodDictionary
+
 
 coroutine.wrap(function()
     local httprequest = (syn and syn.request) or http and http.request or http_request or (fluxus and fluxus.request) or request
