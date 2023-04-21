@@ -1,7 +1,9 @@
-content = game.HttpService:JSONEncode(Configuration)
-if isfile("altconfig.txt") then
-  delfile("altconfig.txt")
+if game.Players.LocalPlayer.Name == Configuration.MainSettings.Host then -- scuffed code im nto bothered to organise it lmao
+  content = game.HttpService:JSONEncode(Configuration)
+  if isfile("altconfig.txt") then
+    delfile("altconfig.txt")
+  end
+  writefile('altconfig.txt', content)
 end
-writefile('altconfig.txt', content)
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/synnyyy/backend/main/actualaltcontrol", true))()
