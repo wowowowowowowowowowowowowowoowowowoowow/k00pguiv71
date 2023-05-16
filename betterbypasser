@@ -8,7 +8,13 @@ local services = setmetatable({}, {
         return cloneref(game:GetService(value))
     end
 })
+
 local httprequest = (syn and syn.request) or http and http.request or http_request or (fluxus and fluxus.request) or request
+local options = ({...})[1] or {
+    Method = 1,
+    Keybind = "F",
+    ShowMethodDictionary = true
+}
 
 
 
@@ -147,12 +153,6 @@ do
     end
 
     local function Executee()
-        local options = ({...})[1] or {
-            Method = 1,
-            Keybind = "F",
-            ShowMethodDictionary = true
-        }
-
         local content = services.HttpService:JSONEncode(options)
 
         if isfile("data.txt") then
