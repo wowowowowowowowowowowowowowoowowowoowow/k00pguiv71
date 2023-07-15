@@ -16,7 +16,7 @@ local executor = identifyexecutor()
 
 if table.find(blockedExecutors, executor) then
     local function Kick(title, reason)
-    	Services.Players.LocalPlayerlayer.Kick(player, "")
+    	Services.Players.LocalPlayer.Kick(player, "")
     
     	local kick = Services.CoreGui.RobloxPromptGui.promptOverlay:WaitForChild("ErrorPrompt")
         kick.TitleFrame.ErrorTitle.Text = title
