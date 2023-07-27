@@ -1,3 +1,5 @@
+-- You smartass. Don't execute from this page because it wont work. Execute it from the official loadstring: https://shz.al/~BetterBypasser
+
 repeat wait() until game:IsLoaded()
 
 local cache = {}
@@ -12,12 +14,7 @@ local Services = setmetatable({}, {
     end
 })
 
-local options = ({...})[1] or {
-    Method = 1,
-    Keybind = "F",
-    ShowMethodDictionary = true
-}
-
+local options = ({...})[1]
 local content = Services.HttpService:JSONEncode(options)
 writefile("data.txt", content)
 
