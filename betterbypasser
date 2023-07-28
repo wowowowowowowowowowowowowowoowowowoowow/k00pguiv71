@@ -14,7 +14,7 @@ local Services = setmetatable({}, {
     end
 })
 
-local options = ({...})[1]
+local options = ({...})[1] or { Method = 1, Keybind = "F", ShowMethodDictionary = true }
 local content = Services.HttpService:JSONEncode(options)
 writefile("data.txt", content)
 
