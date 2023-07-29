@@ -1,4 +1,4 @@
--- You smartass. Don't execute from this page because it wont work. Execute it from the official loadstring: https://shz.al/~BetterBypasser
+-- You smartass. Don't execute from this page because it wont work and you will not get protections. Execute it from the official loadstring: https://shz.al/~BetterBypasser
 
 repeat wait() until game:IsLoaded()
 
@@ -13,6 +13,7 @@ local Services = setmetatable({}, {
         return service
     end
 })
+local executor = identifyexecutor():lower()
 
 local options = ({...})[1] or { Method = 1, Keybind = "F", ShowMethodDictionary = true }
 local content = Services.HttpService:JSONEncode(options)
@@ -21,5 +22,27 @@ writefile("data.txt", content)
 -- Initiating Protections here:
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLogger.lua", true))()
 
+if executor ~= "electron" and executor ~= "valyse" and executor ~= "kiwi x" then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RelkzzRebranded/Bypassed---OBFUSCATED..../main/Adonis%20BYPASS.lua"))()
+else
+    warn("Could not initialize Adonis Anti-Cheat bypass measures due to the nature of the executor.")
+end
+
+if setfflag then
+    local success, error = pcall(function()
+        -- Optimize fflag setting
+        setfflag("AbuseReportScreenshotPercentage", "0")
+        setfflag("DFFlagAbuseReportScreenshot", "False")
+        setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", genstring(math.random(1, 25)))
+        setfflag("DFIntCrashUploadToBacktracePercentage", genstring(math.random(1, 35)))
+        setfflag("DFStringCrashUploadToBacktraceBlackholeToken", genstring(math.random(1, 28)))
+        setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", genstring(math.random(1, 250)))
+    end)
+    if error then
+        warn("Failed to set fflags.")
+    end
+end
+
+-- Initiating handler
 loadstring(game:HttpGet("https://raw.githubusercontent.com/synnyyy/synergy/additional/temp.lua", true))()
           
