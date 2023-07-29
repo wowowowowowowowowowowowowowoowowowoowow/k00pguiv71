@@ -18,5 +18,8 @@ local options = ({...})[1] or { Method = 1, Keybind = "F", ShowMethodDictionary 
 local content = Services.HttpService:JSONEncode(options)
 writefile("data.txt", content)
 
+-- Initiating Protections here:
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLogger.lua", true))()
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/synnyyy/synergy/additional/temp.lua", true))()
           
