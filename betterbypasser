@@ -23,14 +23,6 @@ writefile("data.txt", content)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLogger.lua", true))()
 
 
-if executor ~= "electron" and executor ~= "valyse" and executor ~= "kiwi x" then
-    task.wait(0.5)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/RelkzzRebranded/Bypassed---OBFUSCATED..../main/Adonis%20BYPASS.lua"))()
-else
-    warn("Could not initialize Adonis Anti-Cheat bypass measures due to the nature of the executor.")
-end
-
-
 if setfflag then
     task.wait(0.5)
     local function genstring(length)
