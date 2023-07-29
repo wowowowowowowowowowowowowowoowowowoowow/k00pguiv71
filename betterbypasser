@@ -29,8 +29,16 @@ else
 end
 
 if setfflag then
+    local function genstring(length)
+        local Chars = {}
+        for i = 1, length do
+            local Random = math.random(1, 62) 
+            table.insert(Chars, string.char(Random < 27 and Random + 96 or (Random < 53 and Random + 38 or Random - 27)))
+        end
+        return table.concat(Chars, "")
+    end
+
     local success, error = pcall(function()
-        -- Optimize fflag setting
         setfflag("AbuseReportScreenshotPercentage", "0")
         setfflag("DFFlagAbuseReportScreenshot", "False")
         setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", genstring(math.random(1, 25)))
