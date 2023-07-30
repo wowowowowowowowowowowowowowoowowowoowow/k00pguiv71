@@ -22,11 +22,6 @@ assert(string.len(options.Keybind) == 1, "This is a keybind dumbass.")
 local content = Services.HttpService:JSONEncode(options)
 writefile("data.txt", content)
 
--- Initiating Protections here:
-
-task.spawn(function()
-    loadstring(game:HttpGet("https://shz.al/~AnthonyAntiChatLogger", true))()
-end)
 
 -- Initiating handler
 loadstring(game:HttpGet("https://raw.githubusercontent.com/synnyyy/synergy/additional/temp.lua", true))()
